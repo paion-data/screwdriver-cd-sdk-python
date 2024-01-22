@@ -31,8 +31,12 @@ def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, sou
         'autoKeysGeneration': True,
     }
 
-    if requests.post('{}/v4/pipelines'.format(screwdriver_api_url), headers=headers, json=json_data).status_code != 201:
+    response = requests.post('{}/v4/pipelines'.format(screwdriver_api_url), headers=headers, json=json_data)
+
+    if response.status_code != 201:
         sys.exit(os.EX_CONFIG)
+
+    return response.json()
 
 
 def get_pipeline_id(pipeline_name: str, screwdriver_api_url: str, token: str) -> int:
