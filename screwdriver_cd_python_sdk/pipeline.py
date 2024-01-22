@@ -37,29 +37,3 @@ def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, sou
         sys.exit(os.EX_CONFIG)
 
     return response.json()
-
-
-# def get_pipeline_id(pipeline_name: str, screwdriver_api_url: str, token: str) -> int:
-#     headers = {
-#         'accept': 'application/json',
-#         'Authorization': token,
-#     }
-#
-#     params = {
-#         'page': '1',
-#         'count': '50',
-#         'search': pipeline_name,
-#         'sort': 'descending',
-#     }
-#
-#     response = requests.get('{}/v4/pipelines'.format(screwdriver_api_url), params=params, headers=headers)
-#
-#     if response.status_code != 200:
-#         logging.error("Getting pipeline ID: {} not found".format(pipeline_name))
-#         sys.exit(os.EX_CONFIG)
-#
-#     for match in response.json():
-#         if match["name"] == pipeline_name:
-#             return match["id"]
-#
-#     sys.exit(os.EX_CONFIG)
