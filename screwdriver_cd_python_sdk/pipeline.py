@@ -16,6 +16,78 @@ import logging
 import requests
 import sys, os
 
+def search_pipelines_by_name(name: str, screwdriver_api_url: str, token: str) -> list[object]:
+    """
+    Returns, at most 50 entries, all pipelines whose name contains a specified pipeline name
+
+    :param name:  The pipeline name to search. e.g. "QubitPi/my-project"
+    :param screwdriver_api_url:  The URL of the Screwdriver API server
+    :param token:  The Screwdriver API token
+
+    :return: the native API response body object with the following fields:
+
+    .. code-block:: json
+
+        [
+            {
+                "id":6,
+                "name":"QubitPi/theresa",
+                "scmUri":"github.com:631185801:master",
+                "scmContext":"github:github.com",
+                "scmRepo":{
+                    "branch":"master",
+                    "name":"QubitPi/theresa",
+                    "url":"https://github.com/QubitPi/theresa/tree/master",
+                    "rootDir":"",
+                    "private":true
+                },
+                "createTime":"2024-02-17T11:00:30.036Z",
+                "admins":{
+                    "QubitPi":true
+                },
+                "workflowGraph":{
+                    "nodes":[
+                        ...
+                    ],
+                    "edges":[
+                        ...
+                    ]
+                },
+                "annotations":{
+
+                },
+                "prChain":false,
+                "parameters":{
+
+                },
+                "settings":{
+
+                },
+                "state":"ACTIVE",
+                "subscribedScmUrlsWithActions":[
+
+                ]
+            }
+        ]
+    """
+    headers = {
+        'accept': 'application/json',
+        'Authorization': token
+    }
+
+    params = {
+        'page': '1',
+        'count': '50',
+        'search': name,
+        'sort': 'descending',
+    }
+
+    response = requests.get('{}/v4/pipelines'.format(screwdriver_api_url), params=params, headers=headers)
+
+    if response.status_code != 200:
+        sys.exit(os.EX_CONFIG)
+
+    return response.json()
 
 def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, source_directory: object = None) -> object:
     """
