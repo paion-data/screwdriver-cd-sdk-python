@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ---
-name: Screwdriver CD Python SDK CI/CD
+name: CI/CD
 
 "on":
   pull_request:
@@ -26,8 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
