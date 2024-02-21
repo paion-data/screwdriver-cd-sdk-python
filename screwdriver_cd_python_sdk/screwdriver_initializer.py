@@ -43,7 +43,7 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
             pipeline_id = create_pipeline(checkout_url=pipeline["git"], screwdriver_api_url=screwdriver_api_url, token=token)["id"]
 
         if "awsCredentialFile" in pipeline:
-            with open(_relative_path_to_init(pipeline["awsCredentialFile"]), 'r') as file:
+            with open(pipeline["awsCredentialFile"], 'r') as file:
                 lines = csv.reader(file)
                 for i, row in enumerate(lines):
                     if i == 1:
@@ -74,7 +74,7 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
                 else:
                     create_or_update_secret(
                         secret_name=secret["name"],
-                        secret_value=_file_content(_relative_path_to_init(secret["value"])),
+                        secret_value=_file_content(secret["value"]),
                         pipeline_id=pipeline_id,
                         screwdriver_api_url=screwdriver_api_url,
                         token=token
@@ -87,8 +87,3 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
 def _file_content(file_path: str) -> str:
     with open(file_path, 'r') as file:
         return file.read().rstrip('\n') # https://stackoverflow.com/a/70233945
-
-
-def _relative_path_to_init(rel_path: str) -> str:
-    init_script_path = os.path.dirname(os.path.realpath(__file__))
-    return os.path.join(init_script_path, rel_path)
