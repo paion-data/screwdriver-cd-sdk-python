@@ -22,7 +22,7 @@ name: CI/CD
 
 jobs:
   release:
-    name: Publish Python SDK TO PyPI
+    name: Publish Python SDK To PyPI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
