@@ -17,9 +17,9 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'screwdriver-cd-python-sdk'
-copyright = '2024, Jiaqi Liu'
-author = 'Jiaqi Liu'
+project = 'screwdriver-python-sdk'
+copyright = '2024, Paion Data'
+author = 'Paion Data'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'

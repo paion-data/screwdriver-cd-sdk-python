@@ -12,7 +12,7 @@ The project's dependencies are not specified on RTD, but instead have installed 
 this in the `build log <https://readthedocs.org/api/v2/build/17857935.txt>`_. Visit the project's Builds, click a build,
 and click "view raw"::
 
-    WARNING: autodoc: failed to import module 'rnn' from module 'screwdriver_cd_python_sdk'; the following exception was raised:
+    WARNING: autodoc: failed to import module 'rnn' from module 'screwdriver_python_sdk'; the following exception was raised:
     No module named 'matplotlib'
 
 To remedy the situation, we must specify that the project's dependencies to be installed. See
@@ -24,7 +24,7 @@ Generate Sphinx Documentation Locally
 
 This site is auto-generated using `Sphinx <https://www.sphinx-doc.org/en/master/>`_ with the following command in venv::
 
-    cd /path/to/screwdriver-cd-python-sdk/
+    cd /path/to/screwdriver-python-sdk/
     python3 -m venv venv
     source venv/bin/activate
     pip3 install .
@@ -42,7 +42,7 @@ Install SDK from Source Locally
 
 We recommend creating a virtualenv for your application and activate it
 
-Navigate to the ``screwdriver-cd-python-sdk`` root directory and run::
+Navigate to the ``screwdriver-python-sdk`` root directory and run::
 
     pip3 install -e .
 
