@@ -16,10 +16,10 @@ import logging
 import os
 import json
 import csv
-from screwdriver_python_sdk.pipeline import create_pipeline
-from screwdriver_python_sdk.pipeline import search_pipelines_by_name
-from screwdriver_python_sdk.secrets import create_or_update_secret
-from screwdriver_python_sdk.events import start_build
+from screwdriver_cd_sdk_python.pipeline import create_pipeline
+from screwdriver_cd_sdk_python.pipeline import search_pipelines_by_name
+from screwdriver_cd_sdk_python.secrets import create_or_update_secret
+from screwdriver_cd_sdk_python.events import start_build
 
 def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str) -> None:
     with open(pipelines_config_path, 'r') as file:
