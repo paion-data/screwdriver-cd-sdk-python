@@ -10,7 +10,7 @@ Having trouble? We'd like to help!
 * Try the :doc:`FAQ <faq>` -- it's got answers to some common questions.
 * Looking for specific information? Try the :ref:`genindex` or :ref:`modindex`.
 * Report bugs with screwdriver-cd-sdk-python in our `issue tracker`_.
-* Join the Discord community `Screwdriver Discord`_.
+* Join the Discord community `Screwdriver CD Discord`_.
 
 .. hint::
     * Since methods with two underscores (`__`) cannot be tested due to the
@@ -41,4 +41,4 @@ Usage
    sdk
 
 .. _issue tracker: https://github.com/paion-data/screwdriver-cd-sdk-python/issues
-.. _Screwdriver Discord: https://discord.com/widget?id=1230730932957478983&theme=dark
+.. _Screwdriver CD Discord: https://discord.com/widget?id=1230730932957478983&theme=dark
