@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import logging
-import os
 import json
 import csv
 from screwdriver_cd_sdk_python.pipeline import create_pipeline

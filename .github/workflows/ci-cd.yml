@@ -24,8 +24,8 @@ jobs:
   yml-md-style-and-link-checks:
     uses: paion-data/github-actions-core/.github/workflows/yml-md-style-and-link-checks.yml@master
 
-  release:
-    name: Publish Python SDK To PyPI
+  tests:
+    name: Run all tests
     needs: yml-md-style-and-link-checks
     runs-on: ubuntu-latest
     steps:
@@ -34,11 +34,29 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
+      - name: Test dist build
+        run: python setup.py sdist
+
+  push-release-tag:
+    if: github.ref == 'refs/heads/master'
+    uses: paion-data/github-actions-core/.github/workflows/version-bump.yml@master
+    with:
+      user: QubitPi
+      email: jack20220723@gmail.com
+
+  release:
+    name: Publish Python SDK To PyPI
+    needs: push-release-tag
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
       - name: Package up SDK
-        if: github.ref == 'refs/heads/master'
         run: python setup.py sdist
       - name: Publish a Python distribution to PyPI
-        if: github.ref == 'refs/heads/master'
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
