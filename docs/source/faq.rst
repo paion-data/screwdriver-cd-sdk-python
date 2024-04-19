@@ -12,7 +12,7 @@ The project's dependencies are not specified on RTD, but instead have installed 
 this in the `build log <https://readthedocs.org/api/v2/build/17857935.txt>`_. Visit the project's Builds, click a build,
 and click "view raw"::
 
-    WARNING: autodoc: failed to import module 'rnn' from module 'screwdriver_python_sdk'; the following exception was raised:
+    WARNING: autodoc: failed to import module 'rnn' from module 'screwdriver_cd_sdk_python'; the following exception was raised:
     No module named 'matplotlib'
 
 To remedy the situation, we must specify that the project's dependencies to be installed. See
