@@ -1,6 +1,6 @@
-======================
-Screwdriver Python SDK
-======================
+=========================
+Screwdriver CD Python SDK
+=========================
 
 .. contents:: Table of Contents
     :depth: 2

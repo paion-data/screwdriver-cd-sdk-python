@@ -1,5 +1,5 @@
-Screwdriver Python SDK
-======================
+Screwdriver CD Python SDK
+=========================
 
 ![Python Version][Python Version Badge]
 [![PyPI][PyPI project badge]][PyPI project url]
@@ -21,7 +21,7 @@ Simply close your project and open it with PyCharm again. The re-indexing should
 License
 -------
 
-The use and distribution terms for Screwdriver Python SDK are covered by the [Apache License, Version 2.0].
+The use and distribution terms for Screwdriver CD Python SDK are covered by the [Apache License, Version 2.0].
 
 [Apache License badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License URL]: https://www.apache.org/licenses/LICENSE-2.0
