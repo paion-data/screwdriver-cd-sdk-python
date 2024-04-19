@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'screwdriver-python-sdk'
+project = 'screwdriver-cd-sdk-python'
 copyright = '2024, Paion Data'
 author = 'Paion Data'
 

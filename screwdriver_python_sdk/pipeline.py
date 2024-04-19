@@ -107,13 +107,13 @@ def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, sou
 
         {
             "id":1,
-            "name":"paion-data/screwdriver-python-sdk",
+            "name":"paion-data/screwdriver-cd-sdk-python",
             "scmUri":"github.com:746187061:master",
             "scmContext":"github:github.com",
             "scmRepo":{
                 "branch":"master",
-                "name":"paion-data/screwdriver-python-sdk",
-                "url":"https://github.com/paion-data/screwdriver-python-sdk/tree/master",
+                "name":"paion-data/screwdriver-cd-sdk-python",
+                "url":"https://github.com/paion-data/screwdriver-cd-sdk-python/tree/master",
                 "rootDir":"",
                 "private":false
             },

@@ -24,7 +24,7 @@ Generate Sphinx Documentation Locally
 
 This site is auto-generated using `Sphinx <https://www.sphinx-doc.org/en/master/>`_ with the following command in venv::
 
-    cd /path/to/screwdriver-python-sdk/
+    cd /path/to/screwdriver-cd-sdk-python/
     python3 -m venv venv
     source venv/bin/activate
     pip3 install .
@@ -42,7 +42,7 @@ Install SDK from Source Locally
 
 We recommend creating a virtualenv for your application and activate it
 
-Navigate to the ``screwdriver-python-sdk`` root directory and run::
+Navigate to the ``screwdriver-cd-sdk-python`` root directory and run::
 
     pip3 install -e .
 

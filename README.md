@@ -14,7 +14,7 @@ Coming soon
 Troubleshooting
 ---------------
 
-### PyCharm Doesn't Detect Newly Installed screwdriver-python-sdk
+### PyCharm Doesn't Detect Newly Installed screwdriver-cd-sdk-python
 
 Simply close your project and open it with PyCharm again. The re-indexing should make it work
 
@@ -27,9 +27,9 @@ The use and distribution terms for Screwdriver Python SDK are covered by the [Ap
 [Apache License URL]: https://www.apache.org/licenses/LICENSE-2.0
 [Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html
 
-[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/paion-data/screwdriver-python-sdk/ci-cd.yml?logo=github&style=for-the-badge
-[GitHub Workflow Status URL]: https://github.com/paion-data/screwdriver-python-sdk/actions/workflows/ci-cd.yml
+[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/paion-data/screwdriver-cd-sdk-python/ci-cd.yml?logo=github&style=for-the-badge
+[GitHub Workflow Status URL]: https://github.com/paion-data/screwdriver-cd-sdk-python/actions/workflows/ci-cd.yml
 
 [Python Version Badge]: https://img.shields.io/badge/Python-3.10-brightgreen?style=for-the-badge&logo=python&logoColor=white
-[PyPI project badge]: https://img.shields.io/pypi/v/screwdriver-python-sdk?logo=pypi&logoColor=white&style=for-the-badge
-[PyPI project url]: https://pypi.org/project/screwdriver-python-sdk/
+[PyPI project badge]: https://img.shields.io/pypi/v/screwdriver-cd-sdk-python?logo=pypi&logoColor=white&style=for-the-badge
+[PyPI project url]: https://pypi.org/project/screwdriver-cd-sdk-python/
