@@ -15,9 +15,9 @@ Installing SDK
 ==============
 
 If you are already familiar with installation of Python packages, we can install SDK and its dependencies from
-`PyPI <https://pypi.org/project/screwdriver-cd-python-sdk/>`_ with::
+`PyPI <https://pypi.org/project/screwdriver-cd-sdk-python/>`_ with::
 
-    pip3 install screwdriver-cd-python-sdk
+    pip3 install screwdriver-cd-sdk-python
 
 We strongly recommend that you install SDK in :ref:`a dedicated virtualenv <intro-using-virtualenv>`, to avoid
 conflicting with your system packages.
@@ -32,8 +32,8 @@ Installing from Source
 
 When we want to apply a bug fix quicly by installing SDK locally, we can use::
 
-    git clone https://github.com/QubitPi/screwdriver-cd-python-sdk.git
-    cd screwdriver-cd-python-sdk
+    git clone https://github.com/paion-data/screwdriver-cd-sdk-python.git
+    cd screwdriver-cd-sdk-python
     pip3 install -e .
 
 

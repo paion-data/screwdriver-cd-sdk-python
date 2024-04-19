@@ -1,4 +1,4 @@
-# Copyright Jiaqi Liu
+# Copyright 2024 Paion Data
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ def search_pipelines_by_name(name: str, screwdriver_api_url: str, token: str) ->
     """
     Returns, at most 50 entries, all pipelines whose name contains a specified pipeline name
 
-    :param name:  The pipeline name to search. e.g. "QubitPi/my-project"
+    :param name:  The pipeline name to search. e.g. "paion-data/my-project"
     :param screwdriver_api_url:  The URL of the Screwdriver API server
     :param token:  The Screwdriver API token
 
@@ -31,19 +31,19 @@ def search_pipelines_by_name(name: str, screwdriver_api_url: str, token: str) ->
         [
             {
                 "id":6,
-                "name":"QubitPi/theresa",
+                "name":"paion-data/my-git-repo",
                 "scmUri":"github.com:631185801:master",
                 "scmContext":"github:github.com",
                 "scmRepo":{
                     "branch":"master",
-                    "name":"QubitPi/theresa",
-                    "url":"https://github.com/QubitPi/theresa/tree/master",
+                    "name":"paion-data/my-git-repo",
+                    "url":"https://github.com/paion-data/my-git-repo/tree/master",
                     "rootDir":"",
                     "private":true
                 },
                 "createTime":"2024-02-17T11:00:30.036Z",
                 "admins":{
-                    "QubitPi":true
+                    "paion-data":true
                 },
                 "workflowGraph":{
                     "nodes":[
@@ -99,7 +99,7 @@ def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, sou
     :param screwdriver_api_url:  The URL of the Screwdriver API server
     :param token:  The Screwdriver API token
     :param source_directory:  The custom directory that this pipeline is based upon. See
-    https://qubitpi.github.io/screwdriver-cd-guide/user-guide/configuration/sourceDirectory for more details
+    https://paion-data.github.io/screwdriver-cd-guide/user-guide/configuration/sourceDirectory for more details
 
     :return: the native API response body object with the following fields:
 
@@ -107,19 +107,19 @@ def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, sou
 
         {
             "id":1,
-            "name":"QubitPi/screwdriver-cd-python-sdk",
+            "name":"paion-data/screwdriver-cd-sdk-python",
             "scmUri":"github.com:746187061:master",
             "scmContext":"github:github.com",
             "scmRepo":{
                 "branch":"master",
-                "name":"QubitPi/screwdriver-cd-python-sdk",
-                "url":"https://github.com/QubitPi/screwdriver-cd-python-sdk/tree/master",
+                "name":"paion-data/screwdriver-cd-sdk-python",
+                "url":"https://github.com/paion-data/screwdriver-cd-sdk-python/tree/master",
                 "rootDir":"",
                 "private":false
             },
             "createTime":"2024-02-17T09:55:32.632Z",
             "admins":{
-                "QubitPi":true
+                "paion-data":true
             },
             "workflowGraph":{
                 "nodes":[

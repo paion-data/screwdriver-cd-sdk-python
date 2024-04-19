@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="screwdriver-cd-python-sdk",
+    name="screwdriver-cd-sdk-python",
     version="1.0.0",
-    description="Screwdriver CD Python Software Development Kit (SDK) used to write Python automation scripts that create and manage resources in Screwdriver",
-    url="https://github.com/QubitPi/screwdriver-cd-python-sdk",
-    author="Jiaqi liu",
+    description="Screwdriver Python Software Development Kit (SDK) used to write Python automation scripts that create and manage resources in Screwdriver",
+    url="https://github.com/paion-data/screwdriver-cd-sdk-python",
+    author="Paion Data",
     author_email="jack20220723@gmail.com",
     license="Apache-2.0",
     packages=find_packages(),

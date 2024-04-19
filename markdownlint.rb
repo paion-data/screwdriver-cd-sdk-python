@@ -11,16 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-version: 2
 
-build:
-  os: ubuntu-22.04
-  tools:
-    python: "3.11"
-
-sphinx:
-  configuration: docs/source/conf.py
-
-python:
-  install:
-  - requirements: docs/source/requirements.txt
+all
+# https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md
+rule 'MD003', style: :setext_with_atx
+rule 'MD004', style: :sublist
+rule 'MD013', line_length: 120
+rule 'MD029', style: :ordered
