@@ -1,4 +1,4 @@
-# Copyright Jiaqi Liu
+# Copyright 2024 Paion Data
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,10 +34,10 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
 
         [
             {
-                "git": "git@github.com:QubitPi/hashicorp-aws.git"
+                "git": "git@github.com:paion-data/immutable-infrastructure-as-a-service.git"
             },
             {
-                "git": "git@github.com:QubitPi/docker-kong.git"
+                "git": "git@github.com:paion-data/docker-kong.git"
             },
         ]
 
@@ -49,20 +49,20 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
 
         [
             {
-                "git": "git@github.com:QubitPi/docker-kong.git",
+                "git": "git@github.com:paion-data/docker-kong.git",
                 "awsCredentialFile": "abs-path-to/aws_accessKeys.csv",
             }
         ]
 
     In addition, one can also preload
-    `GitHub Secrets <https://screwdriver-docs.qubitpi.org/user-guide/configuration/secrets>`_ with, for example
+    `GitHub Secrets <https://screwdriver-docs.paion-data.dev/user-guide/configuration/secrets>`_ with, for example
 
     .. highlight:: json
     .. code-block:: json
 
         [
             {
-                "git": "git@github.com:QubitPi/docker-kong.git",
+                "git": "git@github.com:paion-data/docker-kong.git",
                 "secrets": [
                     {
                         "name": "MY_CREDENTIAL_FILE",
@@ -82,7 +82,7 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
 
     :param pipelines_config_path:  The absolute JSON file containing Screwdriver pipeline definitions
     :param screwdriver_api_url:  The Screwdriver API URL. For example, https://screwdriver.mycompany.com
-    :param token:  `The Screwdriver API Token <https://screwdriver-docs.qubitpi.org/user-guide/tokens.html>`_
+    :param token:  `The Screwdriver API Token <https://screwdriver-docs.paion-data.dev/user-guide/tokens.html>`_
     """
     with open(pipelines_config_path, 'r') as file:
         pipelines = json.load(file)

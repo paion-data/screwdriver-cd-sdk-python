@@ -1,4 +1,4 @@
-# Copyright Jiaqi Liu
+# Copyright 2024 Paion Data
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ name: CI/CD
 
 jobs:
   yml-md-style-and-link-checks:
-    uses: QubitPi/hashicorp-aws/.github/workflows/yml-md-style-and-link-checks.yml@master
+    uses: paion-data/github-actions-core/.github/workflows/yml-md-style-and-link-checks.yml@master
 
   tests:
     name: Run all tests
@@ -42,12 +42,11 @@ jobs:
         run: python setup.py sdist
 
   push-release-tag:
-    needs: tests
     if: github.ref == 'refs/heads/master'
-    uses: QubitPi/hashicorp-aws/.github/workflows/version-bump.yml@master
+    uses: paion-data/github-actions-core/.github/workflows/version-bump.yml@master
     with:
-      user: QubitPi
-      email: jack20220723@gmail.com
+      user: qing-wq
+      email: 2702461713@qq.com
 
   release:
     name: Publish Python SDK To PyPI
