@@ -21,6 +21,9 @@ name: CI/CD
       - master
 
 jobs:
+  yml-md-style-and-link-checks:
+    uses: paion-data/github-actions-core/.github/workflows/yml-md-style-and-link-checks.yml@master
+
   release:
     name: Publish Python SDK To PyPI
     runs-on: ubuntu-latest

@@ -99,7 +99,7 @@ def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, sou
     :param screwdriver_api_url:  The URL of the Screwdriver API server
     :param token:  The Screwdriver API token
     :param source_directory:  The custom directory that this pipeline is based upon. See
-    https://paion-data.github.io/screwdriver-guide/user-guide/configuration/sourceDirectory for more details
+    https://paion-data.github.io/screwdriver-cd-guide/user-guide/configuration/sourceDirectory for more details
 
     :return: the native API response body object with the following fields:
 
