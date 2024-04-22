@@ -12,15 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
+import sys
+
 import requests
-import sys, os
+
 
 def start_build(pipeline_id: int, screwdriver_api_url: str, token: str) -> object:
     """
     Creates and starts a pipeline build.
 
     :param pipeline_id:  The ID of the pipeline to trigger the build
-    :param screwdriver_api_url:  The URL of the Screwdriver API server. For example: http://192.168.7.2:9001 or https://mysd.com
+    :param screwdriver_api_url:  The URL of the Screwdriver API server. For example: http://192.168.7.2:9001 or
+           https://mysd.com
     :param token:  The Screwdriver API token
 
     :return:  The exact same response body as the "POST /v4/events" Swagger API in JSON
@@ -35,13 +39,15 @@ def start_build(pipeline_id: int, screwdriver_api_url: str, token: str) -> objec
         token
     )
 
+
 def create_and_start_event(screwdriver_api_url: str, body: object, token: str) -> object:
     """
     Creates and starts a specific event.
 
     If an error occurs, this function returns nothing but throws the causing error.
 
-    :param screwdriver_api_url:  The URL of the Screwdriver API server. For example: http://192.168.7.2:9001 or https://mysd.com
+    :param screwdriver_api_url:  The URL of the Screwdriver API server. For example: http://192.168.7.2:9001 or
+           https://mysd.com
     :param body:  The exact same body as the one used in "POST /v4/events" Swagger API
     :param token:  The Screwdriver API token
 

@@ -13,8 +13,11 @@
 # limitations under the License.
 
 import logging
+import os
+import sys
+
 import requests
-import sys, os
+
 
 def search_pipelines_by_name(name: str, screwdriver_api_url: str, token: str) -> list[object]:
     """
@@ -88,6 +91,7 @@ def search_pipelines_by_name(name: str, screwdriver_api_url: str, token: str) ->
         sys.exit(os.EX_CONFIG)
 
     return response.json()
+
 
 def create_pipeline(checkout_url: str, screwdriver_api_url: str, token: str, source_directory: object = None) -> object:
     """

@@ -12,14 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import logging
-import os
-import json
 import csv
-from screwdriver_cd_python_sdk.pipeline import create_pipeline
-from screwdriver_cd_python_sdk.pipeline import search_pipelines_by_name
-from screwdriver_cd_python_sdk.secrets import create_or_update_secret
+import json
+import logging
+
 from screwdriver_cd_python_sdk.events import start_build
+from screwdriver_cd_python_sdk.pipeline import (create_pipeline,
+                                                search_pipelines_by_name)
+from screwdriver_cd_python_sdk.secrets import create_or_update_secret
+
 
 def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str) -> None:
     with open(pipelines_config_path, 'r') as file:
@@ -28,9 +29,9 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
     for pipeline in pipelines:
 
         git_url = pipeline["git"]
-        repo_name = git_url[git_url.find(":")+1 : git_url.find(".git")]
+        repo_name = git_url[git_url.find(":") + 1:git_url.find(".git")]
 
-        pipeline_id=None
+        pipeline_id = None
         for match in search_pipelines_by_name(name=repo_name, screwdriver_api_url=screwdriver_api_url, token=token):
             if match["name"] == repo_name:
                 pipeline_id = match["id"]
@@ -40,7 +41,11 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
 
         if pipeline_id is None:
             logging.debug("Creating {}...".format(repo_name))
-            pipeline_id = create_pipeline(checkout_url=pipeline["git"], screwdriver_api_url=screwdriver_api_url, token=token)["id"]
+            pipeline_id = create_pipeline(
+                checkout_url=pipeline["git"],
+                screwdriver_api_url=screwdriver_api_url,
+                token=token
+            )["id"]
 
         if "awsCredentialFile" in pipeline:
             with open(pipeline["awsCredentialFile"], 'r') as file:
@@ -86,4 +91,4 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
 
 def _file_content(file_path: str) -> str:
     with open(file_path, 'r') as file:
-        return file.read().rstrip('\n') # https://stackoverflow.com/a/70233945
+        return file.read().rstrip('\n')  # https://stackoverflow.com/a/70233945

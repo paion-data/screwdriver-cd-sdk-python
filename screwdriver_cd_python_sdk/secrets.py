@@ -13,10 +13,13 @@
 # limitations under the License.
 
 import logging
+import os
+import sys
+
 import requests
-import sys, os
 
 logging.basicConfig(level=logging.DEBUG)
+
 
 def _headers(token: str) -> object:
     return {
@@ -26,7 +29,13 @@ def _headers(token: str) -> object:
     }
 
 
-def create_or_update_secret(secret_name: str, secret_value: str, pipeline_id: int, screwdriver_api_url: str, token: str) -> None:
+def create_or_update_secret(
+        secret_name: str,
+        secret_value: str,
+        pipeline_id: int,
+        screwdriver_api_url: str,
+        token: str
+) -> None:
     """
     "allowInPR" is set to be false by default
 
@@ -53,7 +62,11 @@ def create_or_update_secret(secret_name: str, secret_value: str, pipeline_id: in
                     'allowInPR': False,
                 }
 
-                if requests.put('{}/v4/secrets/{}'.format(screwdriver_api_url, secrete["id"]), headers=_headers(token), json=json_data).status_code != 200:
+                if requests.put(
+                        '{}/v4/secrets/{}'.format(screwdriver_api_url, secrete["id"]),
+                        headers=_headers(token),
+                        json=json_data
+                ).status_code != 200:
                     sys.exit(os.EX_CONFIG)
     else:
         logging.debug("Creating secret '{}'".format(secret_name))
@@ -65,5 +78,7 @@ def create_or_update_secret(secret_name: str, secret_value: str, pipeline_id: in
             'allowInPR': False,
         }
 
-        if requests.post('{}/v4/secrets'.format(screwdriver_api_url), headers=_headers(token), json=json_data).status_code != 201:
+        if requests.post(
+                '{}/v4/secrets'.format(screwdriver_api_url), headers=_headers(token), json=json_data
+        ).status_code != 201:
             sys.exit(os.EX_CONFIG)

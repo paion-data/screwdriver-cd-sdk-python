@@ -2,6 +2,7 @@ Screwdriver CD Python SDK
 =========================
 
 ![Python Version][Python Version Badge]
+[![Read the Docs][Read the Docs badge]][Read the Docs URL]
 [![PyPI][PyPI project badge]][PyPI project url]
 [![GitHub Workflow Status][GitHub Workflow Status badge]][GitHub Workflow Status URL]
 [![Apache License badge]][Apache License URL]
@@ -39,3 +40,6 @@ The use and distribution terms for Screwdriver CD Python SDK are covered by the 
 [Python Version Badge]: https://img.shields.io/badge/Python-3.10-brightgreen?style=for-the-badge&logo=python&logoColor=white
 [PyPI project badge]: https://img.shields.io/pypi/v/screwdriver-cd-python-sdk?logo=pypi&logoColor=white&style=for-the-badge
 [PyPI project url]: https://pypi.org/project/screwdriver-cd-python-sdk/
+
+[Read the Docs badge]: https://img.shields.io/readthedocs/screwdriver-cd-python-sdk?style=for-the-badge&logo=readthedocs&logoColor=white&label=Read%20the%20Docs&labelColor=8CA1AF
+[Read the Docs URL]: https://screwdriver-cd-python-sdk.readthedocs.io/en/latest/
