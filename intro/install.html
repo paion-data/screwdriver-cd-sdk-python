@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation guide &mdash; screwdriver-cd-sdk-python 0.1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script>
+    window.addEventListener('load', () => {
+        Array.from(document.getElementsByClassName('zoomable-callgraph')).forEach(function(element) {
+            svgPanZoom(element);
+        });
+    })
+    </script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Screwdriver CD Python SDK" href="../sdk.html" />
+    <link rel="prev" title="Screwdriver CD Python SDK Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> screwdriver-cd-sdk-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#supported-python-versions">Supported Python versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-sdk">Installing SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-from-source">Installing from Source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-a-virtual-environment-recommended">Using a virtual environment (Recommended)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sdk.html">Screwdriver CD Python SDK</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">screwdriver-cd-sdk-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installation guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/intro/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-guide">
+<span id="intro-install"></span><h1>Installation guide<a class="headerlink" href="#installation-guide" title="Permalink to this heading"></a></h1>
+<section id="supported-python-versions">
+<h2>Supported Python versions<a class="headerlink" href="#supported-python-versions" title="Permalink to this heading"></a></h2>
+<p>The SDK has been tested with Python 3.10. It may work with older versions of Python but it is not guaranteed.</p>
+</section>
+<section id="installing-sdk">
+<h2>Installing SDK<a class="headerlink" href="#installing-sdk" title="Permalink to this heading"></a></h2>
+<p>If you are already familiar with installation of Python packages, we can install SDK and its dependencies from
+<a class="reference external" href="https://pypi.org/project/screwdriver-cd-sdk-python/">PyPI</a> with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">screwdriver</span><span class="o">-</span><span class="n">cd</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python</span>
+</pre></div>
+</div>
+<p>We strongly recommend that you install SDK in <a class="hoverxref tooltip reference internal" href="#intro-using-virtualenv"><span class="std std-ref">a dedicated virtualenv</span></a>, to avoid
+conflicting with your system packages.</p>
+<p>If you’re using <a class="reference external" href="https://docs.anaconda.com/anaconda/">Anaconda</a> or
+<a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">Miniconda</a>, please allow me to
+apologize because I hate those two, so we won’t install the package from there.</p>
+</section>
+<section id="installing-from-source">
+<h2>Installing from Source<a class="headerlink" href="#installing-from-source" title="Permalink to this heading"></a></h2>
+<p>When we want to apply a bug fix quicly by installing SDK locally, we can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">paion</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">screwdriver</span><span class="o">-</span><span class="n">cd</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">screwdriver</span><span class="o">-</span><span class="n">cd</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<section id="using-a-virtual-environment-recommended">
+<span id="intro-using-virtualenv"></span><h3>Using a virtual environment (Recommended)<a class="headerlink" href="#using-a-virtual-environment-recommended" title="Permalink to this heading"></a></h3>
+<p>We recommend installing SDK in a virtual environment on all platforms.</p>
+<p>Python packages can be installed either globally (a.k.a system wide), or in user-space. We do not recommend installing
+SDK system wide. Instead, we recommend installing SDK within a “virtual environment” (<a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv" title="(in Python v3.12)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code></a>),
+which keep you from conflicting with already-installed Python system packages.</p>
+<p>See <a class="reference external" href="https://docs.python.org/3/tutorial/venv.html#tut-venv" title="(in Python v3.12)"><span>Virtual Environments and Packages</span></a> on how to create your virtual environment.</p>
+<p>Once you have created a virtual environment, we can install SDK inside it with <code class="docutils literal notranslate"><span class="pre">pip3</span></code>, just like any other
+Python package.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Screwdriver CD Python SDK Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sdk.html" class="btn btn-neutral float-right" title="Screwdriver CD Python SDK" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Paion Data.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

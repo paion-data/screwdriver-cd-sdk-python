@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screwdriver CD Python SDK &mdash; screwdriver-cd-sdk-python 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/js/hoverxref.js"></script>
+        <script src="_static/js/tooltipster.bundle.min.js"></script>
+        <script src="_static/js/micromodal.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script>
+    window.addEventListener('load', () => {
+        Array.from(document.getElementsByClassName('zoomable-callgraph')).forEach(function(element) {
+            svgPanZoom(element);
+        });
+    })
+    </script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation guide" href="intro/install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> screwdriver-cd-sdk-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/install.html">Installation guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Screwdriver CD Python SDK</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">screwdriver-cd-sdk-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Screwdriver CD Python SDK</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sdk.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="screwdriver-cd-python-sdk">
+<h1><a class="toc-backref" href="#id1">Screwdriver CD Python SDK</a><a class="headerlink" href="#screwdriver-cd-python-sdk" title="Permalink to this heading"></a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#screwdriver-cd-python-sdk" id="id1">Screwdriver CD Python SDK</a></p></li>
+</ul>
+</div>
+<span class="target" id="module-screwdriver_cd_sdk_python.events"></span><dl class="py function">
+<dt class="sig sig-object py" id="screwdriver_cd_sdk_python.events.create_and_start_event">
+<span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.events.</span></span><span class="sig-name descname"><span class="pre">create_and_start_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/events.html#create_and_start_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.events.create_and_start_event" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and starts a specific event.</p>
+<p>If an error occurs, this function returns nothing but throws the causing error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screwdriver_api_url</strong> – The URL of the Screwdriver API server. For example: <a class="reference external" href="http://192.168.7.2:9001">http://192.168.7.2:9001</a> or
+<a class="reference external" href="https://mysd.com">https://mysd.com</a></p></li>
+<li><p><strong>body</strong> – The exact same body as the one used in “POST /v4/events” Swagger API</p></li>
+<li><p><strong>token</strong> – The Screwdriver API token</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The exact same response body as the “POST /v4/events” Swagger API in JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="screwdriver_cd_sdk_python.events.start_build">
+<span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.events.</span></span><span class="sig-name descname"><span class="pre">start_build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipeline_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/events.html#start_build"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.events.start_build" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and starts a pipeline build.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipeline_id</strong> – The ID of the pipeline to trigger the build</p></li>
+<li><p><strong>screwdriver_api_url</strong> – The URL of the Screwdriver API server. For example: <a class="reference external" href="http://192.168.7.2:9001">http://192.168.7.2:9001</a> or
+<a class="reference external" href="https://mysd.com">https://mysd.com</a></p></li>
+<li><p><strong>token</strong> – The Screwdriver API token</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The exact same response body as the “POST /v4/events” Swagger API in JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-screwdriver_cd_sdk_python.pipeline"></span><dl class="py function">
+<dt class="sig sig-object py" id="screwdriver_cd_sdk_python.pipeline.create_pipeline">
+<span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.pipeline.</span></span><span class="sig-name descname"><span class="pre">create_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checkout_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/pipeline.html#create_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.pipeline.create_pipeline" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new Screwdriver pipeline for a particular repo and an optional source directory.</p>
+<p>If the source_directory is not specified, it defaults to the repo root.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>checkout_url</strong> – The URL of the repository containing the screwdriver.yaml file of the pipeline created</p></li>
+<li><p><strong>screwdriver_api_url</strong> – The URL of the Screwdriver API server</p></li>
+<li><p><strong>token</strong> – The Screwdriver API token</p></li>
+<li><p><strong>source_directory</strong> – The custom directory that this pipeline is based upon. See</p></li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference external" href="https://paion-data.github.io/screwdriver-cd-guide/user-guide/configuration/sourceDirectory">https://paion-data.github.io/screwdriver-cd-guide/user-guide/configuration/sourceDirectory</a> for more details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the native API response body object with the following fields:</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &quot;id&quot;:1,
+    &quot;name&quot;:&quot;paion-data/screwdriver-cd-sdk-python&quot;,
+    &quot;scmUri&quot;:&quot;github.com:746187061:master&quot;,
+    &quot;scmContext&quot;:&quot;github:github.com&quot;,
+    &quot;scmRepo&quot;:{
+        &quot;branch&quot;:&quot;master&quot;,
+        &quot;name&quot;:&quot;paion-data/screwdriver-cd-sdk-python&quot;,
+        &quot;url&quot;:&quot;https://github.com/paion-data/screwdriver-cd-sdk-python/tree/master&quot;,
+        &quot;rootDir&quot;:&quot;&quot;,
+        &quot;private&quot;:false
+    },
+    &quot;createTime&quot;:&quot;2024-02-17T09:55:32.632Z&quot;,
+    &quot;admins&quot;:{
+        &quot;paion-data&quot;:true
+    },
+    &quot;workflowGraph&quot;:{
+        &quot;nodes&quot;:[
+            ...
+        ],
+        &quot;edges&quot;:[
+            ...
+        ]
+    },
+    &quot;annotations&quot;:{
+
+    },
+    &quot;prChain&quot;:false,
+    &quot;state&quot;:&quot;ACTIVE&quot;,
+    &quot;subscribedScmUrlsWithActions&quot;:[
+
+    ]
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="screwdriver_cd_sdk_python.pipeline.search_pipelines_by_name">
+<span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.pipeline.</span></span><span class="sig-name descname"><span class="pre">search_pipelines_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/pipeline.html#search_pipelines_by_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.pipeline.search_pipelines_by_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns, at most 50 entries, all pipelines whose name contains a specified pipeline name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The pipeline name to search. e.g. “paion-data/my-project”</p></li>
+<li><p><strong>screwdriver_api_url</strong> – The URL of the Screwdriver API server</p></li>
+<li><p><strong>token</strong> – The Screwdriver API token</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the native API response body object with the following fields:</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>[
+    {
+        &quot;id&quot;:6,
+        &quot;name&quot;:&quot;paion-data/my-git-repo&quot;,
+        &quot;scmUri&quot;:&quot;github.com:631185801:master&quot;,
+        &quot;scmContext&quot;:&quot;github:github.com&quot;,
+        &quot;scmRepo&quot;:{
+            &quot;branch&quot;:&quot;master&quot;,
+            &quot;name&quot;:&quot;paion-data/my-git-repo&quot;,
+            &quot;url&quot;:&quot;https://github.com/paion-data/my-git-repo/tree/master&quot;,
+            &quot;rootDir&quot;:&quot;&quot;,
+            &quot;private&quot;:true
+        },
+        &quot;createTime&quot;:&quot;2024-02-17T11:00:30.036Z&quot;,
+        &quot;admins&quot;:{
+            &quot;paion-data&quot;:true
+        },
+        &quot;workflowGraph&quot;:{
+            &quot;nodes&quot;:[
+                ...
+            ],
+            &quot;edges&quot;:[
+                ...
+            ]
+        },
+        &quot;annotations&quot;:{
+
+        },
+        &quot;prChain&quot;:false,
+        &quot;parameters&quot;:{
+
+        },
+        &quot;settings&quot;:{
+
+        },
+        &quot;state&quot;:&quot;ACTIVE&quot;,
+        &quot;subscribedScmUrlsWithActions&quot;:[
+
+        ]
+    }
+]
+</pre></div>
+</div>
+</dd></dl>
+
+<span class="target" id="module-screwdriver_cd_sdk_python.secrets"></span><dl class="py function">
+<dt class="sig sig-object py" id="screwdriver_cd_sdk_python.secrets.create_or_update_secret">
+<span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.secrets.</span></span><span class="sig-name descname"><span class="pre">create_or_update_secret</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secret_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/secrets.html#create_or_update_secret"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.secrets.create_or_update_secret" title="Permalink to this definition"></a></dt>
+<dd><p>“allowInPR” is set to be false by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>secret_name</strong> – </p></li>
+<li><p><strong>secret_value</strong> – </p></li>
+<li><p><strong>pipeline_id</strong> – </p></li>
+<li><p><strong>token</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro/install.html" class="btn btn-neutral float-left" title="Installation guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Paion Data.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
