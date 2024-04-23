@@ -41,7 +41,36 @@ jobs:
       - name: Test dist build
         run: python setup.py sdist
 
+  documentation:
+    name: Test Build and Deploy Documentation to GitHub Pages
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Build documentation
+        run: |
+          pip install -r source/requirements.txt
+          make html
+        working-directory: docs
+      - name: Load CNAME
+        if: github.ref == 'refs/heads/master'
+        run: echo "screwdriver-sdk.paion-data.dev" >> docs/build/html/CNAME
+      - name: Deploy documentation to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/build/html
+          enable_jekyll: false
+          user_name: qing-wq
+          user_email: 2702461713@qq.com
+
   push-release-tag:
+    needs: tests
     if: github.ref == 'refs/heads/master'
     uses: paion-data/github-actions-core/.github/workflows/version-bump.yml@master
     with:
