@@ -23,6 +23,67 @@ from screwdriver_cd_python_sdk.secrets import create_or_update_secret
 
 
 def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str) -> None:
+    """
+    Given a JSON file containing Screwdriver pipeline definitions, this method initializes all pipelines on a running
+    Screwdriver instance.
+
+    The basics works like this
+
+    .. highlight:: json
+    .. code-block:: json
+
+        [
+            {
+                "git": "git@github.com:QubitPi/hashicorp-aws.git"
+            },
+            {
+                "git": "git@github.com:QubitPi/docker-kong.git"
+            },
+        ]
+
+    We also support loading AWS secrets into Screwdriver instances. To do that, download the IAM credentials CSV file
+    and specify the absolute path of that file by
+
+    .. highlight:: json
+    .. code-block:: json
+
+        [
+            {
+                "git": "git@github.com:QubitPi/docker-kong.git",
+                "awsCredentialFile": "abs-path-to/aws_accessKeys.csv",
+            }
+        ]
+
+    In addition, one can also preload
+    `GitHub Secrets <https://screwdriver-docs.qubitpi.org/user-guide/configuration/secrets>`_ with, for example
+
+    .. highlight:: json
+    .. code-block:: json
+
+        [
+            {
+                "git": "git@github.com:QubitPi/docker-kong.git",
+                "secrets": [
+                    {
+                        "name": "MY_CREDENTIAL_FILE",
+                        "type": "file",
+                        "value": "/home/root/credential.json"
+                    },
+                    {
+                        "name": "MY_PASSWORD",
+                        "type": "value",
+                        "value": "23efdsf324gfdg"
+                    }
+                ],
+            }
+        ]
+
+    Note that both value and file based secrets are supported as shown in the example above
+
+    :param pipelines_config_path:  The absolute JSON file containing Screwdriver pipeline definitions
+    :param screwdriver_api_url:  The Screwdriver API URL. For example, https://screwdriver.mycompany.com
+    :param token:  `The Screwdriver API Token <https://screwdriver-docs.qubitpi.org/user-guide/tokens.html>`_
+    """
     with open(pipelines_config_path, 'r') as file:
         pipelines = json.load(file)
 
