@@ -55,7 +55,7 @@ def initialize(pipelines_config_path: str, screwdriver_api_url: str, token: str)
         ]
 
     In addition, one can also preload
-    `GitHub Secrets <https://screwdriver-docs.qubitpi.org/user-guide/configuration/secrets>`_ with, for example
+    `Screwdriver Secrets <https://screwdriver-docs.qubitpi.org/user-guide/configuration/secrets>`_ with, for example
 
     .. highlight:: json
     .. code-block:: json

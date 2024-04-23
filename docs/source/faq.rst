@@ -76,3 +76,9 @@ No module named 'pytest' while Running Test Directly in PyCharm
 
 The solution is going to '**Settings** -> **Tools** -> **Python Integrated Tools**' and scroll down to where it says
 `pytest not found` and there is a **FIX** button. Clicking on it and apply the settings shall resolve the problem
+
+
+PyCharm Doesn't Detect Newly Installed screwdriver-cd-python-sdk
+================================================================
+
+Simply close your project and open it with PyCharm again. The re-indexing should make it work

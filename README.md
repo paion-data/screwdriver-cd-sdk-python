@@ -7,17 +7,22 @@ Screwdriver CD Python SDK
 [![GitHub Workflow Status][GitHub Workflow Status badge]][GitHub Workflow Status URL]
 [![Apache License badge]][Apache License URL]
 
-Documentation
--------------
+Screwdriver CD Python SDK offers a programmatic approach of interacting with
+[Screwdriver API](https://qubitpi.github.io/screwdriver-cd-guide/user-guide/api). For example, it supports
 
-Coming soon
+- [Batch creating pipeline jobs](https://screwdriver-cd-python-sdk.readthedocs.io/en/latest/sdk.html#screwdriver_cd_python_sdk.screwdriver_initializer.initialize)
+- [Searching pipeline by name](https://screwdriver-cd-python-sdk.readthedocs.io/en/latest/sdk.html#screwdriver_cd_python_sdk.screwdriver_initializer.initialize)
+- [Trigger a pipeline build](https://screwdriver-cd-python-sdk.readthedocs.io/en/latest/sdk.html#screwdriver_cd_python_sdk.screwdriver_initializer.initialize)
+- etc.
 
-Troubleshooting
----------------
+To install the SDK, simply run
 
-### PyCharm Doesn't Detect Newly Installed screwdriver-cd-python-sdk
+```console
+pip install screwdriver-cd-python-sdk
+```
 
-Simply close your project and open it with PyCharm again. The re-indexing should make it work
+Please visit [Screwdriver CD Python SDK documentation](https://screwdriver-cd-python-sdk.readthedocs.io/en/latest/) for
+more details
 
 License
 -------
