@@ -257,6 +257,65 @@
 </div>
 </dd></dl>
 
+<span class="target" id="module-screwdriver_cd_sdk_python.screwdriver_initializer"></span><dl class="py function">
+<dt class="sig sig-object py" id="screwdriver_cd_sdk_python.screwdriver_initializer.initialize">
+<span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.screwdriver_initializer.</span></span><span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipelines_config_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/screwdriver_initializer.html#initialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.screwdriver_initializer.initialize" title="Permalink to this definition"></a></dt>
+<dd><p>Given a JSON file containing Screwdriver pipeline definitions, this method initializes all pipelines on a running
+Screwdriver instance.</p>
+<p>The basics works like this</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;git&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;git@github.com:paion-data/immutable-infrastructure-as-a-service.git&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;git&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;git@github.com:paion-data/docker-kong.git&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>We also support loading AWS secrets into Screwdriver instances. To do that, download the IAM credentials CSV file
+and specify the absolute path of that file by</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;git&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;git@github.com:paion-data/docker-kong.git&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;awsCredentialFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abs-path-to/aws_accessKeys.csv&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>In addition, one can also preload
+<a class="reference external" href="https://screwdriver-docs.paion-data.dev/user-guide/configuration/secrets">GitHub Secrets</a> with, for example</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;git&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;git@github.com:paion-data/docker-kong.git&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;secrets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MY_CREDENTIAL_FILE&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/root/credential.json&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MY_PASSWORD&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;23efdsf324gfdg&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that both value and file based secrets are supported as shown in the example above</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipelines_config_path</strong> – The absolute JSON file containing Screwdriver pipeline definitions</p></li>
+<li><p><strong>screwdriver_api_url</strong> – The Screwdriver API URL. For example, <a class="reference external" href="https://screwdriver.mycompany.com">https://screwdriver.mycompany.com</a></p></li>
+<li><p><strong>token</strong> – <a class="reference external" href="https://screwdriver-docs.paion-data.dev/user-guide/tokens.html">The Screwdriver API Token</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <span class="target" id="module-screwdriver_cd_sdk_python.secrets"></span><dl class="py function">
 <dt class="sig sig-object py" id="screwdriver_cd_sdk_python.secrets.create_or_update_secret">
 <span class="sig-prename descclassname"><span class="pre">screwdriver_cd_sdk_python.secrets.</span></span><span class="sig-name descname"><span class="pre">create_or_update_secret</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secret_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">screwdriver_api_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="reference internal" href="_modules/screwdriver_cd_sdk_python/secrets.html#create_or_update_secret"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#screwdriver_cd_sdk_python.secrets.create_or_update_secret" title="Permalink to this definition"></a></dt>

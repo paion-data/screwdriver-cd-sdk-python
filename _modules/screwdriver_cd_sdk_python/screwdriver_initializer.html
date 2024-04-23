@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>screwdriver_cd_sdk_python.screwdriver_initializer &mdash; screwdriver-cd-sdk-python 0.1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script>
+    window.addEventListener('load', () => {
+        Array.from(document.getElementsByClassName('zoomable-callgraph')).forEach(function(element) {
+            svgPanZoom(element);
+        });
+    })
+    </script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> screwdriver-cd-sdk-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/install.html">Installation guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sdk.html">Screwdriver CD Python SDK</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">screwdriver-cd-sdk-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>screwdriver_cd_sdk_python.screwdriver_initializer</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for screwdriver_cd_sdk_python.screwdriver_initializer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2024 Paion Data</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">screwdriver_cd_sdk_python.events</span> <span class="kn">import</span> <span class="n">start_build</span>
+<span class="kn">from</span> <span class="nn">screwdriver_cd_sdk_python.pipeline</span> <span class="kn">import</span> <span class="p">(</span><span class="n">create_pipeline</span><span class="p">,</span>
+                                                <span class="n">search_pipelines_by_name</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">screwdriver_cd_sdk_python.secrets</span> <span class="kn">import</span> <span class="n">create_or_update_secret</span>
+
+
+<div class="viewcode-block" id="initialize"><a class="viewcode-back" href="../../sdk.html#screwdriver_cd_sdk_python.screwdriver_initializer.initialize">[docs]</a><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">pipelines_config_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">screwdriver_api_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a JSON file containing Screwdriver pipeline definitions, this method initializes all pipelines on a running</span>
+<span class="sd">    Screwdriver instance.</span>
+
+<span class="sd">    The basics works like this</span>
+
+<span class="sd">    .. highlight:: json</span>
+<span class="sd">    .. code-block:: json</span>
+
+<span class="sd">        [</span>
+<span class="sd">            {</span>
+<span class="sd">                &quot;git&quot;: &quot;git@github.com:paion-data/immutable-infrastructure-as-a-service.git&quot;</span>
+<span class="sd">            },</span>
+<span class="sd">            {</span>
+<span class="sd">                &quot;git&quot;: &quot;git@github.com:paion-data/docker-kong.git&quot;</span>
+<span class="sd">            },</span>
+<span class="sd">        ]</span>
+
+<span class="sd">    We also support loading AWS secrets into Screwdriver instances. To do that, download the IAM credentials CSV file</span>
+<span class="sd">    and specify the absolute path of that file by</span>
+
+<span class="sd">    .. highlight:: json</span>
+<span class="sd">    .. code-block:: json</span>
+
+<span class="sd">        [</span>
+<span class="sd">            {</span>
+<span class="sd">                &quot;git&quot;: &quot;git@github.com:paion-data/docker-kong.git&quot;,</span>
+<span class="sd">                &quot;awsCredentialFile&quot;: &quot;abs-path-to/aws_accessKeys.csv&quot;,</span>
+<span class="sd">            }</span>
+<span class="sd">        ]</span>
+
+<span class="sd">    In addition, one can also preload</span>
+<span class="sd">    `GitHub Secrets &lt;https://screwdriver-docs.paion-data.dev/user-guide/configuration/secrets&gt;`_ with, for example</span>
+
+<span class="sd">    .. highlight:: json</span>
+<span class="sd">    .. code-block:: json</span>
+
+<span class="sd">        [</span>
+<span class="sd">            {</span>
+<span class="sd">                &quot;git&quot;: &quot;git@github.com:paion-data/docker-kong.git&quot;,</span>
+<span class="sd">                &quot;secrets&quot;: [</span>
+<span class="sd">                    {</span>
+<span class="sd">                        &quot;name&quot;: &quot;MY_CREDENTIAL_FILE&quot;,</span>
+<span class="sd">                        &quot;type&quot;: &quot;file&quot;,</span>
+<span class="sd">                        &quot;value&quot;: &quot;/home/root/credential.json&quot;</span>
+<span class="sd">                    },</span>
+<span class="sd">                    {</span>
+<span class="sd">                        &quot;name&quot;: &quot;MY_PASSWORD&quot;,</span>
+<span class="sd">                        &quot;type&quot;: &quot;value&quot;,</span>
+<span class="sd">                        &quot;value&quot;: &quot;23efdsf324gfdg&quot;</span>
+<span class="sd">                    }</span>
+<span class="sd">                ],</span>
+<span class="sd">            }</span>
+<span class="sd">        ]</span>
+
+<span class="sd">    Note that both value and file based secrets are supported as shown in the example above</span>
+
+<span class="sd">    :param pipelines_config_path:  The absolute JSON file containing Screwdriver pipeline definitions</span>
+<span class="sd">    :param screwdriver_api_url:  The Screwdriver API URL. For example, https://screwdriver.mycompany.com</span>
+<span class="sd">    :param token:  `The Screwdriver API Token &lt;https://screwdriver-docs.paion-data.dev/user-guide/tokens.html&gt;`_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pipelines_config_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">pipelines</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">pipeline</span> <span class="ow">in</span> <span class="n">pipelines</span><span class="p">:</span>
+
+        <span class="n">git_url</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">[</span><span class="s2">&quot;git&quot;</span><span class="p">]</span>
+        <span class="n">repo_name</span> <span class="o">=</span> <span class="n">git_url</span><span class="p">[</span><span class="n">git_url</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span><span class="n">git_url</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;.git&quot;</span><span class="p">)]</span>
+
+        <span class="n">pipeline_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">search_pipelines_by_name</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">repo_name</span><span class="p">,</span> <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">match</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">repo_name</span><span class="p">:</span>
+                <span class="n">pipeline_id</span> <span class="o">=</span> <span class="n">match</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is already created.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">repo_name</span><span class="p">))</span>
+
+                <span class="k">break</span>
+
+        <span class="k">if</span> <span class="n">pipeline_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Creating </span><span class="si">{}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">repo_name</span><span class="p">))</span>
+            <span class="n">pipeline_id</span> <span class="o">=</span> <span class="n">create_pipeline</span><span class="p">(</span>
+                <span class="n">checkout_url</span><span class="o">=</span><span class="n">pipeline</span><span class="p">[</span><span class="s2">&quot;git&quot;</span><span class="p">],</span>
+                <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span>
+                <span class="n">token</span><span class="o">=</span><span class="n">token</span>
+            <span class="p">)[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="s2">&quot;awsCredentialFile&quot;</span> <span class="ow">in</span> <span class="n">pipeline</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pipeline</span><span class="p">[</span><span class="s2">&quot;awsCredentialFile&quot;</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">lines</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">create_or_update_secret</span><span class="p">(</span>
+                            <span class="n">secret_name</span><span class="o">=</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">,</span>
+                            <span class="n">secret_value</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                            <span class="n">pipeline_id</span><span class="o">=</span><span class="n">pipeline_id</span><span class="p">,</span>
+                            <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span>
+                            <span class="n">token</span><span class="o">=</span><span class="n">token</span>
+                        <span class="p">)</span>
+                        <span class="n">create_or_update_secret</span><span class="p">(</span>
+                            <span class="n">secret_name</span><span class="o">=</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">,</span>
+                            <span class="n">secret_value</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                            <span class="n">pipeline_id</span><span class="o">=</span><span class="n">pipeline_id</span><span class="p">,</span>
+                            <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span>
+                            <span class="n">token</span><span class="o">=</span><span class="n">token</span>
+                        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">pipeline</span><span class="p">[</span><span class="s2">&quot;secrets&quot;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">secret</span> <span class="ow">in</span> <span class="n">pipeline</span><span class="p">[</span><span class="s2">&quot;secrets&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">secret</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span>
+                    <span class="n">create_or_update_secret</span><span class="p">(</span>
+                        <span class="n">secret_name</span><span class="o">=</span><span class="n">secret</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="n">secret_value</span><span class="o">=</span><span class="n">secret</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
+                        <span class="n">pipeline_id</span><span class="o">=</span><span class="n">pipeline_id</span><span class="p">,</span>
+                        <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span>
+                        <span class="n">token</span><span class="o">=</span><span class="n">token</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">create_or_update_secret</span><span class="p">(</span>
+                        <span class="n">secret_name</span><span class="o">=</span><span class="n">secret</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                        <span class="n">secret_value</span><span class="o">=</span><span class="n">_file_content</span><span class="p">(</span><span class="n">secret</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]),</span>
+                        <span class="n">pipeline_id</span><span class="o">=</span><span class="n">pipeline_id</span><span class="p">,</span>
+                        <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span>
+                        <span class="n">token</span><span class="o">=</span><span class="n">token</span>
+                    <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">pipeline</span><span class="p">[</span><span class="s2">&quot;runOnCreate&quot;</span><span class="p">]:</span>
+            <span class="n">start_build</span><span class="p">(</span><span class="n">pipeline_id</span><span class="o">=</span><span class="n">pipeline_id</span><span class="p">,</span> <span class="n">screwdriver_api_url</span><span class="o">=</span><span class="n">screwdriver_api_url</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_file_content</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># https://stackoverflow.com/a/70233945</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Paion Data.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
